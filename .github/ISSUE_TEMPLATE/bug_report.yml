@@ -1,0 +1,36 @@
+name: Bug report
+description: Report a reproducible problem.
+title: "[Bug]: "
+labels: [bug, "status: triage"]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include secrets, production logs or security vulnerabilities.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What happened and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction
+      description: Include minimal steps, the commit SHA and sanitized output.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Node, pnpm and Docker versions where relevant.
+    validations:
+      required: true
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: Community agreement
+      options:
+        - label: I searched existing issues and agree to the code of conduct.
+          required: true

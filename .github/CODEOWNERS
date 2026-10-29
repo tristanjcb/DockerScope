@@ -1,0 +1,5 @@
+# The last matching rule wins. Ownership requests do not replace branch rules.
+* @tristanjcb
+/.github/ @tristanjcb
+/pnpm-lock.yaml @tristanjcb
+/packages/ @tristanjcb

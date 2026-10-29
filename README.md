@@ -27,18 +27,68 @@ These features are planned and may change as the project evolves.
 
 ## Tech Stack
 
-| Component | Technology |
-|---|---|
-| Monitoring agent | Rust |
-| Backend API | TypeScript, NestJS |
-| Web dashboard | React, TypeScript |
-| Container integration | Docker Engine API |
+| Component             | Technology                                         |
+| --------------------- | -------------------------------------------------- |
+| Monitoring agent      | TypeScript with a first-party Docker Engine client |
+| Backend API           | TypeScript, NestJS                                 |
+| Web dashboard         | React, TypeScript                                  |
+| Container integration | Docker Engine API                                  |
 
+The Docker Engine integration will use a package developed and maintained by us,
+not Dockerode. Its implementation will be introduced under `packages/` later.
 Additional technologies will be selected as the project develops.
+
+## Monorepo
+
+The repository uses **pnpm workspaces** and **Turborepo** on **Node.js 24 LTS**.
+
+```text
+apps/
+  docs/        Documentation application placeholder
+  mobile/      Mobile application placeholder
+  dashboard/   Web dashboard placeholder
+  desktop/     Desktop application placeholder
+  api/         Backend API placeholder
+  agents/      Monitoring agents placeholder
+packages/
+  .gitkeep     Reserved for future shared packages
+```
+
+The six applications currently compile only placeholder metadata. The frameworks
+listed above describe the intended stack, not implemented product features.
+
+## Getting started
+
+Use the Node version in `.node-version`, then:
+
+```sh
+corepack enable
+pnpm install --frozen-lockfile
+pnpm check
+pnpm build
+```
+
+`package.json` pins the pnpm version. See the [contribution guide](.github/CONTRIBUTING.md)
+for editor setup, commands, testing and adding dependencies.
+
+## Quality and delivery
+
+Oxlint, Oxfmt, strict TypeScript, SCSS Stylelint, Vitest unit and integration tests,
+Commitlint, Husky and lint-staged provide local and CI checks. GitHub Actions runs
+on Linux and Windows. CodeQL, secret scanning, dependency review and scheduled audits
+cover repository security; Renovate manages dependency update proposals.
+
+Coverage currently measures repository tooling only. Codecov upload is ready to
+activate after connecting the repository. There are no executable user journeys
+requiring e2e tests yet. Release tags trigger full validation and create a draft
+GitHub release with source and compiled archives plus SHA-256 checksums.
+See the [maintainer setup guide](.github/MAINTAINERS.md) for service activation,
+GitHub settings, release steps and the limits of the current scaffold.
 
 ## Roadmap
 
-- [ ] Initialize the Rust monitoring agent
+- [x] Initialize the TypeScript monorepo and contribution tooling
+- [ ] Implement the TypeScript monitoring agent and first-party Docker client
 - [ ] Connect to the Docker Engine API
 - [ ] Discover and list containers
 - [ ] Collect basic container metrics
@@ -53,8 +103,12 @@ DockerScope is an open-source project in its early stages.
 
 Contributions, ideas, bug reports, and technical discussions are welcome.
 
-Contribution guidelines will be added as the project matures.
+Read the [contribution guide](.github/CONTRIBUTING.md),
+[commit convention](.github/COMMIT_CONVENTION.md), and
+[code of conduct](.github/CODE_OF_CONDUCT.md).
+Report vulnerabilities privately using our [security policy](.github/SECURITY.md).
 
 ## License
 
-DockerScope is intended to be released under an open-source license. License details will be finalized before the first public release.
+DockerScope is licensed under [Apache-2.0](LICENSE).
+The adapted code of conduct is separately licensed under CC BY-SA 4.0.
