@@ -8,11 +8,34 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "typecheck": "turbo run typecheck"
+    "typecheck": "tsc -p tsconfig.tooling.json --noEmit && turbo run typecheck",
+    "lint": "oxlint --deny-warnings . && pnpm lint:styles",
+    "lint:styles": "stylelint \"**/*.scss\" --allow-empty-input",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check .",
+    "test": "pnpm test:unit && pnpm test:integration",
+    "test:unit": "vitest run --config vitest.config.ts --coverage",
+    "test:integration": "pnpm build && vitest run --config vitest.integration.config.ts",
+    "check:workspace": "node scripts/check-workspace.mjs",
+    "check": "pnpm check:workspace && pnpm format:check && pnpm lint && pnpm typecheck && pnpm test",
+    "prepare": "husky",
+    "commitlint": "commitlint"
   },
   "devDependencies": {
+    "@commitlint/cli": "21.2.4",
+    "@commitlint/config-conventional": "21.2.4",
+    "@types/node": "24.19.2",
+    "@vitest/coverage-v8": "5.0.5",
+    "husky": "9.1.7",
+    "lint-staged": "17.6.0",
+    "oxfmt": "0.75.0",
+    "oxlint": "1.90.0",
+    "stylelint": "17.16.0",
+    "stylelint-config-standard-scss": "17.0.0",
     "turbo": "2.11.10",
-    "typescript": "7.0.2"
+    "typescript": "7.0.2",
+    "vitest": "5.0.5",
+    "yaml": "2.9.1"
   },
   "engines": {
     "node": ">=24 <25"

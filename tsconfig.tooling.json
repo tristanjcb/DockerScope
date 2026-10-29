@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "noEmit": true,
+    "types": ["node"]
+  },
+  "include": ["*.ts", "*.mjs", "scripts/**/*.mjs", "tests/**/*.ts", ".github/scripts/**/*.mjs"]
+}
