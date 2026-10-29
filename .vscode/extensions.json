@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "oxc.oxc-vscode",
+    "stylelint.vscode-stylelint",
+    "EditorConfig.EditorConfig",
+    "vitest.explorer",
+    "GitHub.vscode-github-actions"
+  ]
+}
