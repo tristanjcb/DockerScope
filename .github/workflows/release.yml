@@ -34,7 +34,7 @@ jobs:
         env:
           RELEASE_TAG: ${{ github.ref_name }}
         run: |
-          node --input-type=module -e 'import fs from "node:fs"; const version = JSON.parse(fs.readFileSync("package.json", "utf8")).version; if (!/^v[0-9]+\.[0-9]+\.[0-9]+(?:-[0-9A-Za-z.-]+)?$/.test(process.env.RELEASE_TAG) || process.env.RELEASE_TAG !== `v${version}`) process.exit(1);'
+          node --input-type=module -e 'import fs from "node:fs"; const version = JSON.parse(fs.readFileSync("package.json", "utf8")).version; if (!/^v[0-9]+\.[0-9]+\.[0-9]+(?:-[0-9A-Za-z.-]+)?$/.test(process.env.RELEASE_TAG) || process.env.RELEASE_TAG !== "v" + version) process.exit(1);'
           git merge-base --is-ancestor HEAD origin/main
       - run: pnpm build
       - name: Create source and compiled archives
