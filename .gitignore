@@ -1,0 +1,35 @@
+# Dependencies and build products
+node_modules/
+.pnpm-store/
+.turbo/
+dist/
+build/
+out/
+coverage/
+release/
+*.tsbuildinfo
+*.log
+playwright-report/
+test-results/
+# Secrets: only example files may be committed
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+# Local state
+.DS_Store
+Thumbs.db
+.idea/*
+!.idea/.gitignore
+!.idea/DockerScope.iml
+!.idea/misc.xml
+!.idea/modules.xml
+!.idea/vcs.xml
+!.idea/codeStyles/
+!.idea/inspectionProfiles/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json

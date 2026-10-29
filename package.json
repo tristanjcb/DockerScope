@@ -1,0 +1,21 @@
+{
+  "name": "dockerscope",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Open-source Docker monitoring and diagnostics platform",
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "typecheck": "turbo run typecheck"
+  },
+  "devDependencies": {
+    "turbo": "2.11.10",
+    "typescript": "7.0.2"
+  },
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "packageManager": "pnpm@10.28.2"
+}
