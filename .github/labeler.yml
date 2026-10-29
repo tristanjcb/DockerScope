@@ -1,0 +1,30 @@
+"area: docs":
+  - changed-files:
+      - any-glob-to-any-file: "apps/docs/**"
+"area: mobile":
+  - changed-files:
+      - any-glob-to-any-file: "apps/mobile/**"
+"area: dashboard":
+  - changed-files:
+      - any-glob-to-any-file: "apps/dashboard/**"
+"area: desktop":
+  - changed-files:
+      - any-glob-to-any-file: "apps/desktop/**"
+"area: api":
+  - changed-files:
+      - any-glob-to-any-file: "apps/api/**"
+"area: agents":
+  - changed-files:
+      - any-glob-to-any-file: "apps/agents/**"
+"area: packages":
+  - changed-files:
+      - any-glob-to-any-file: "packages/**"
+documentation:
+  - changed-files:
+      - any-glob-to-any-file: "**/*.md"
+ci:
+  - changed-files:
+      - any-glob-to-any-file: [".github/**", ".husky/**", "scripts/**"]
+dependencies:
+  - changed-files:
+      - any-glob-to-any-file: ["**/package.json", "pnpm-lock.yaml", "pnpm-workspace.yaml"]

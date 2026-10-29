@@ -1,0 +1,87 @@
+[
+  {
+    "name": "bug",
+    "color": "d73a4a",
+    "description": "Reproducible defect"
+  },
+  {
+    "name": "enhancement",
+    "color": "a2eeef",
+    "description": "New capability or improvement"
+  },
+  {
+    "name": "documentation",
+    "color": "0075ca",
+    "description": "Documentation changes"
+  },
+  {
+    "name": "dependencies",
+    "color": "0366d6",
+    "description": "Dependency updates"
+  },
+  {
+    "name": "security",
+    "color": "b60205",
+    "description": "Security hardening; no private disclosures"
+  },
+  {
+    "name": "good first issue",
+    "color": "7057ff",
+    "description": "Approachable contributor task"
+  },
+  {
+    "name": "help wanted",
+    "color": "008672",
+    "description": "Contributions welcome"
+  },
+  {
+    "name": "status: triage",
+    "color": "ededed",
+    "description": "Needs maintainer assessment"
+  },
+  {
+    "name": "ci",
+    "color": "1d76db",
+    "description": "Automation and quality tooling"
+  },
+  {
+    "name": "breaking change",
+    "color": "d93f0b",
+    "description": "Requires migration"
+  },
+  {
+    "name": "area: docs",
+    "color": "bfd4f2",
+    "description": "Changes to docs"
+  },
+  {
+    "name": "area: mobile",
+    "color": "bfd4f2",
+    "description": "Changes to mobile"
+  },
+  {
+    "name": "area: dashboard",
+    "color": "bfd4f2",
+    "description": "Changes to dashboard"
+  },
+  {
+    "name": "area: desktop",
+    "color": "bfd4f2",
+    "description": "Changes to desktop"
+  },
+  {
+    "name": "area: api",
+    "color": "bfd4f2",
+    "description": "Changes to api"
+  },
+  {
+    "name": "area: agents",
+    "color": "bfd4f2",
+    "description": "Changes to agents"
+  },
+  {
+    "name": "area: packages",
+    "color": "bfd4f2",
+    "description": "Changes to packages"
+  }
+]

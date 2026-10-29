@@ -1,0 +1,4 @@
+{
+  "bug": ["\\bbug\\b", "\\bcrash(?:es)?\\b", "\\bregression\\b"],
+  "enhancement": ["\\bfeature\\b", "\\benhancement\\b"]
+}

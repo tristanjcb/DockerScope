@@ -17,9 +17,10 @@
     "test:unit": "vitest run --config vitest.config.ts --coverage",
     "test:integration": "pnpm build && vitest run --config vitest.integration.config.ts",
     "check:workspace": "node scripts/check-workspace.mjs",
-    "check": "pnpm check:workspace && pnpm format:check && pnpm lint && pnpm typecheck && pnpm test",
+    "check": "pnpm check:workspace && pnpm check:workflows && pnpm format:check && pnpm lint && pnpm typecheck && pnpm test",
     "prepare": "husky",
-    "commitlint": "commitlint"
+    "commitlint": "commitlint",
+    "check:workflows": "node .github/scripts/check-workflows.mjs"
   },
   "devDependencies": {
     "@commitlint/cli": "21.2.4",

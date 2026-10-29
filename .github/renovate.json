@@ -1,0 +1,48 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":dependencyDashboard",
+    ":semanticCommits",
+    ":pinDevDependencies",
+    "helpers:pinGitHubActionDigests"
+  ],
+  "timezone": "Europe/Paris",
+  "schedule": ["before 7am on monday"],
+  "labels": ["dependencies"],
+  "rangeStrategy": "pin",
+  "minimumReleaseAge": "3 days",
+  "prConcurrentLimit": 5,
+  "prHourlyLimit": 2,
+  "automerge": false,
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 7am on monday"]
+  },
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "schedule": ["at any time"],
+    "minimumReleaseAge": "0 days",
+    "labels": ["dependencies", "security"]
+  },
+  "packageRules": [
+    {
+      "matchManagers": ["github-actions"],
+      "groupName": "GitHub Actions",
+      "pinDigests": true
+    },
+    {
+      "matchPackageNames": ["vitest", "@vitest/coverage-v8"],
+      "groupName": "Vitest"
+    },
+    {
+      "matchPackageNames": ["@commitlint/cli", "@commitlint/config-conventional"],
+      "groupName": "Commitlint"
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "labels": ["dependencies", "breaking change"],
+      "dependencyDashboardApproval": true
+    }
+  ]
+}
