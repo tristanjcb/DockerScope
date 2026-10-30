@@ -30,8 +30,8 @@ repository owner, and verify their state after importing this repository:
   and add required reviewers when another maintainer is available. Protect release
   tags so only maintainers can create them. Draft releases still require human publication.
 - The funding file links to nonmonetary support. Add a real sponsorship destination
-  only after the maintainer has registered one. A private community conduct inbox is
-  not configured yet; the code of conduct documents the currently available channels.
+  only after the maintainer has registered one. Conduct reports are sent privately to `tristan@kresov.com`, as documented in the
+  code of conduct. Keep that contact address current.
 
 ## Workflow boundaries
 
